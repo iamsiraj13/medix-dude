@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState , useHistory} from 'react';
 import './Service.css';
 
 const Service = () => {
 
     const [services, setService] = useState([]);
-    
+    let history = useHistory();
 
     useEffect(()=>{
         fetch('./service.json')
@@ -13,6 +12,10 @@ const Service = () => {
         .then(data =>setService(data))
     },[]);
 
+    const sd = (id)=>{
+        history.push(`/service-details/${id}`)
+    }
+console.log(services)
     return (
         <div className="service-area py-5"> 
             <div className="container">
@@ -27,7 +30,7 @@ const Service = () => {
                             <img src={service.thumb} alt="" />
                             <h3>{service.title}</h3>
                             <p>{service.sortDesc}</p>
-                            <Link to={`/service-details/${service.id}`}><button className="btn btn-info">Read More</button></Link>
+                             <button className="btn btn-info" onClick={()=> sd(id)}>Read More</button> 
                         </div>
                     </div>)
                     }

@@ -1,25 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 
-const ServiceDetails = (props) => {
-    console.log(props.service)
-    const [serviceDetails, setServiceDetails] = useState({});
-
-    const {serviceId} = useParams();
-   
-    const url = `./service.json/${serviceId}`;
-
+const ServiceDetails = () => {
  
+
+    const [cars , setCars ] = useState([]);
+
     useEffect(()=>{
-        fetch(url)
+        fetch('./service.json')
         .then(res => res.json())
-        .then(data =>setServiceDetails(data))
+        .then(data => console.data(data))
     },[]);
- 
+    
 
     return (
         <div>
-            <h2>Service Details comming soon-- {serviceId}</h2>
+            <h2>Service Details comming soon-- </h2> 
         </div>
     );
 };

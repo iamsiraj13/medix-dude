@@ -2,8 +2,8 @@ import React from 'react';
 
 const Booking = () => {
     return (
-        <div>
-            <h2>this is booking page</h2>
+        <div className="container py-5">
+            <h2>Book Your Favorite service</h2>
         </div>
     );
 };

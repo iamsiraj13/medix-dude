@@ -17,6 +17,7 @@ const Header = () => {
                             <ul className="d-flex justify-content-end">
                               <li> <Link to="/home">Home</Link> </li>
                               <li> <Link to="/about">About</Link> </li>
+                              <li> <Link to="/service-details">service details</Link> </li>
                               <li> <Link to="/booking">Booking</Link> </li>
                               <li> <Link to="/surgery">Surgery</Link> </li>
                             {

@@ -41,7 +41,10 @@ const App = () => {
          <Route path="/register">
            <Register></Register>
          </Route>
-         <Route path="/service-details/:serviceId">
+         {/* <Route path="/service-details">
+           <ServiceDetails></ServiceDetails>
+         </Route> */}
+         <Route path="/service-details/:id">
            <ServiceDetails></ServiceDetails>
          </Route>
          <Route path="*">
